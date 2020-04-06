@@ -1,0 +1,10 @@
+{
+  "RunTimeIntervalSeconds": 10, 
+  "AppPools": [
+    {
+      "Name": "NAME_OF_THE_APPLICATION_POOL",
+      "Query": "YOUR_DEFINED_SQL_QUERY_LIKE: Select DATEADD(MINUTE, 15, NextRunTime), * From dbo.BackgroundCronTasks where DATEADD(MINUTE, 15, NextRunTime) > GETUTCDATE()",
+      "ConnectionString": "Data Source=localhost;Initial Catalog=NAME_OF_YOUR_CATALOG;Integrated Security=true"
+    }
+  ]
+}
